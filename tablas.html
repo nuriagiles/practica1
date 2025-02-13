@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablas de Multiplicar</title>
+  <style>
+    /* Estilo general */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Contenedor de tablas */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Estilos de las tablas */
+    table {
+      border-collapse: collapse;
+      width: 170px;
+      background: #fff;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    table:hover {
+      transform: scale(1.05);
+    }
+
+    /* Cabecera de las tablas */
+    thead th {
+      background: #ff4757;
+      color: #fff;
+      padding: 12px;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #ff6b81;
+    }
+
+    /* Celdas de la tabla */
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    /* Alternancia de colores en las filas */
+    tbody tr:nth-child(even) td {
+      background: #f8f8f8;
+    }
+
+    /* Efecto hover en las filas */
+    tbody tr:hover td {
+      background: #ff6b81;
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Tablas de Multiplicar</h1>
+  <div class="container">
+    <!-- tablas de multiplicar-->
+  </div>
+
+  <script>
+    // Generar las tablas dinámicamente del 1 al 10
+    const container = document.querySelector('.container');
+
+    for (let i = 1; i <= 10; i++) {
+      let table = document.createElement('table');
+      let thead = document.createElement('thead');
+      let tbody = document.createElement('tbody');
+
+      // Encabezado
+      thead.innerHTML = `<tr><th colspan="2">Tabla del ${i}</th></tr>`;
+      table.appendChild(thead);
+
+      // Filas de multiplicación
+      for (let j = 1; j <= 10; j++) {
+        let row = document.createElement('tr');
+        row.innerHTML = `<td>${i} x ${j}</td><td>${i * j}</td>`;
+        tbody.appendChild(row);
+      }
+
+      table.appendChild(tbody);
+      container.appendChild(table);
+    }
+  </script>
+</body>
+</html>

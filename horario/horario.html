@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario Semanal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 70%; /* Ajuste para que coincida con la imagen */
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            font-weight: bold;
+            height: 50px; /* Ajuste de altura */
+            width: 16%;  /* Asegura que todas las columnas sean iguales */
+        }
+        /* Encabezado */
+        thead th {
+            background-color: #ffffff;
+            font-size: 18px;
+        }
+        /* Imagen de la rana */
+        .hora img {
+            max-height: 40px; /* Ajustado para que encaje bien */
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+        /* Colores de asignaturas */
+        .manualidades { background-color: #FFA500; } /* Naranja */
+        .latin { background-color: #FF9999; } /* Rojo claro */
+        .arte { background-color: #99CC66; } /* Verde */
+        .robotica { background-color: #CC99FF; } /* Lila */
+        .ingenieria { background-color: #FFFF33; } /* Amarillo */
+        .refuerzo { background-color: #FF66FF; } /* Rosa */
+        .japones { background-color: #66CCFF; } /* Azul */
+        .modelismo { background-color: #FFCC33; } /* Amarillo anaranjado */
+        .cartografia { background-color: #FF9900; } /* Naranja fuerte */
+        .taller { background-color: #CC66CC; } /* Morado */
+        .tutoria { background-color: #C0C0C0; } /* Gris */
+        .recreo { background-color: #FFFFFF; } /* Blanco */
+    </style>
+</head>
+<body>
+
+    <h1>Horario Semanal</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th class="hora"><img src="/horario/icono.png" alt="Rana"></th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIÉRCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="hora">8:15-9:15</td>
+                <td></td> <!-- Vacío -->
+                <td class="manualidades">MANUALIDADES 1º</td>
+                <td class="manualidades">MANUALIDADES 1º</td>
+                <td class="manualidades">MANUALIDADES 1º</td>
+                <td class="arte">ARTE 3º</td>
+            </tr>
+            <tr>
+                <td class="hora">9:15-10:15</td>
+                <td></td> <!-- Vacío -->
+                <td class="latin">LATÍN 4º</td>
+                <td class="latin">LATÍN 4º</td>
+                <td class="latin">LATÍN 4º</td>
+                <td class="tutoria">TUTORÍA 4º</td>
+            </tr>
+            <tr>
+                <td class="hora">10:15-11:15</td>
+                <td class="latin">LATÍN 4º</td>
+                <td class="robotica">ROBÓTICA UNI</td>
+                <td class="arte">ARTE 3º</td>
+                <td class="robotica">ROBÓTICA UNI</td>
+                <td class="ingenieria">INGENIERÍA ESPACIAL</td>
+            </tr>
+            <tr>
+                <td class="hora">11:15-11:45</td>
+                <td></td> <!-- Vacío -->
+                <td></td> <!-- Vacío -->
+                <td class="recreo">RECREO</td> <!-- Solo aparece en Miércoles -->
+                <td></td> <!-- Vacío -->
+                <td></td> <!-- Vacío -->
+            </tr>
+            <tr>
+                <td class="hora">11:45-12:45</td>
+                <td class="refuerzo">REFUERZO</td>
+                <td class="arte">ARTE 3º</td>
+                <td class="robotica">ROBÓTICA UNI</td>
+                <td class="arte">ARTE 3º</td>
+                <td class="ingenieria">INGENIERÍA ESPACIAL</td>
+            </tr>
+            <tr>
+                <td class="hora">12:45-13:45</td>
+                <td class="japones">JAPONÉS 5º</td>
+                <td class="ingenieria">INGENIERÍA ESPACIAL</td>
+                <td class="japones">JAPONÉS 5º</td>
+                <td class="taller">TALLER BACHILLERATO</td>
+                <td class="modelismo">MODELISMO</td>
+            </tr>
+            <tr>
+                <td class="hora">13:45-14:45</td>
+                <td class="cartografia">CARTOGRAFÍA INTERACTIVA</td>
+                <td class="japones">JAPONÉS 5º</td>
+                <td></td> <!-- Vacío -->
+                <td></td> <!-- Vacío -->
+                <td></td> <!-- Vacío -->
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+

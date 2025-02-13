@@ -1,97 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla con Rowspan y Colspan</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0px 100px 50px 100px;
+            padding: 90px;
+        }
+        .container {
+            width: 90%;
+            border: 2px solid black;
+            padding: 5px;
             text-align: center;
         }
-        /* Tabla exterior */
-        .tabla-exterior {
-            border: 2px solid black;
-            margin: 40px auto;
-            padding: 10px;
-            width: 85%;
-            background-color: #fff;
-        }
-        /* Tabla interior */
-        .tabla-interior {
-            border-collapse: collapse;
+        table {
             width: 100%;
-            background-color: #fff;
+            border-collapse: collapse;
         }
         th, td {
             border: 1px solid black;
             padding: 10px;
-            text-align: left;
         }
         th {
-            font-weight: bold;
+            text-align: center;
+        }
+        td {
+            text-align: left;
+        }
+        h1, h2 {
+            color: green;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- Tabla exterior que enmarca la tabla principal -->
-    <table class="tabla-exterior">
-        <tr>
-            <td>
-                <!-- Tabla interior con los datos -->
-                <table class="tabla-interior">
-                    <!-- Encabezados -->
-                    <tr>
-                        <th>Name</th>
-                        <th>Class</th>
-                        <th>School</th>
-                    </tr>
-                    <!-- Fila 1: Mahima -->
-                    <tr>
-                        <td rowspan="2">Mahima</td>
-                        <td>Gupta</td>
-                        <td rowspan="2">MVM School</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>A</td>
-                    </tr>
-                    <!-- Fila 2: Sri -->
-                    <tr>
-                        <td rowspan="2">Sri</td>
-                        <td>Krishn</td>
-                        <td rowspan="2">LMS School</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>B</td>
-                    </tr>
-                    <!-- Fila 3: Shivika -->
-                    <tr>
-                        <td rowspan="2">Shivika</td>
-                        <td>Goyal</td>
-                        <td rowspan="2">SCPM School</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>A</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <div class="container">
+        <h1>GeeksforGeeks</h1>
+        <h2>Table with Rowspan and Colspan</h2>
+
+        <table>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Class</th>
+                <th>School</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Mahima</td>
+                <td rowspan="2">Gupta</td>
+                <td>11</td>
+                <td rowspan="2">MVM School</td>
+            </tr>
+            <tr>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Sri</td>
+                <td rowspan="2">Krishn</td>
+                <td>3</td>
+                <td rowspan="2">LMS School</td>
+            </tr>
+            <tr>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Shivika</td>
+                <td rowspan="2">Goyal</td>
+                <td>5</td>
+                <td rowspan="2">SCPM School</td>
+            </tr>
+            <tr>
+                <td>A</td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
+
+
